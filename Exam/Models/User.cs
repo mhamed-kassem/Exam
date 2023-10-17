@@ -9,8 +9,8 @@ namespace Exam.Models
     {
         public User()
         {
-            AssessmentAnswers = new HashSet<AssessmentAnswer>();
-            AssessmentEnrols = new HashSet<AssessmentEnrol>();
+            //AssessmentAnswers = new HashSet<AssessmentAnswer>();
+            //AssessmentEnrols = new HashSet<AssessmentEnrol>();
         }
 
         public long Id { get; set; }
@@ -38,7 +38,7 @@ namespace Exam.Models
         public DateTime? OtpCreatedAt { get; set; }
         public long? ProfilePictureId { get; set; }
 
-        public virtual ICollection<AssessmentAnswer> AssessmentAnswers { get; set; }
-        public virtual ICollection<AssessmentEnrol> AssessmentEnrols { get; set; }
+        //public virtual ICollection<AssessmentAnswer> AssessmentAnswers { get; set; }
+        //public virtual ICollection<AssessmentEnrol> AssessmentEnrols { get; set; }
     }
 }

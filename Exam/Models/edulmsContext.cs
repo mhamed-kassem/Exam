@@ -126,23 +126,23 @@ namespace Exam.Models
 
                 entity.Property(e => e.UserId).HasColumnName("user_id");
 
-                entity.HasOne(d => d.Assessment)
-                    .WithMany(p => p.AssessmentAnswers)
-                    .HasForeignKey(d => d.AssessmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_answers_assessments");
+                //entity.HasOne(d => d.Assessment)
+                //    //.WithMany(p => p.AssessmentAnswers)
+                //    .HasForeignKey(d => d.AssessmentId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_answers_assessments");
 
-                entity.HasOne(d => d.Question)
-                    .WithMany(p => p.AssessmentAnswers)
-                    .HasForeignKey(d => d.QuestionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_answers_assessment_questions");
+                //entity.HasOne(d => d.Question)
+                //    .WithMany(p => p.AssessmentAnswers)
+                //    .HasForeignKey(d => d.QuestionId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_answers_assessment_questions");
 
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.AssessmentAnswers)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_answers_users");
+                //entity.HasOne(d => d.User)
+                //    .WithMany(p => p.AssessmentAnswers)
+                //    .HasForeignKey(d => d.UserId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_answers_users");
             });
 
             modelBuilder.Entity<AssessmentDatum>(entity =>
@@ -165,11 +165,11 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Assessment)
-                    .WithMany(p => p.AssessmentData)
-                    .HasForeignKey(d => d.AssessmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_data_assessments");
+                //entity.HasOne(d => d.Assessment)
+                //    .WithMany(p => p.AssessmentData)
+                //    .HasForeignKey(d => d.AssessmentId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_data_assessments");
             });
 
             modelBuilder.Entity<AssessmentDepartment>(entity =>
@@ -190,11 +190,11 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Assessment)
-                    .WithMany(p => p.AssessmentDepartments)
-                    .HasForeignKey(d => d.AssessmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_department_assessments");
+                //entity.HasOne(d => d.Assessment)
+                //    .WithMany(p => p.AssessmentDepartments)
+                //    .HasForeignKey(d => d.AssessmentId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_department_assessments");
             });
 
             modelBuilder.Entity<AssessmentEnrol>(entity =>
@@ -221,17 +221,17 @@ namespace Exam.Models
 
                 entity.Property(e => e.UserId).HasColumnName("user_id");
 
-                entity.HasOne(d => d.Assessment)
-                    .WithMany(p => p.AssessmentEnrols)
-                    .HasForeignKey(d => d.AssessmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_enrols_assessments");
+                //entity.HasOne(d => d.Assessment)
+                //    .WithMany(p => p.AssessmentEnrols)
+                //    .HasForeignKey(d => d.AssessmentId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_enrols_assessments");
 
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.AssessmentEnrols)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_enrols_users");
+                //entity.HasOne(d => d.User)
+                //    .WithMany(p => p.AssessmentEnrols)
+                //    .HasForeignKey(d => d.UserId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_enrols_users");
             });
 
             modelBuilder.Entity<AssessmentMatch>(entity =>
@@ -282,11 +282,11 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Question)
-                    .WithMany(p => p.AssessmentMatches)
-                    .HasForeignKey(d => d.QuestionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_match_assessment_questions");
+                //entity.HasOne(d => d.Question)
+                //    .WithMany(p => p.AssessmentMatches)
+                //    .HasForeignKey(d => d.QuestionId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_match_assessment_questions");
             });
 
             modelBuilder.Entity<AssessmentMetum>(entity =>
@@ -313,11 +313,11 @@ namespace Exam.Models
                     .HasColumnType("text")
                     .HasColumnName("value");
 
-                entity.HasOne(d => d.Assessment)
-                    .WithMany(p => p.AssessmentMeta)
-                    .HasForeignKey(d => d.AssessmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_meta_assessments");
+                //entity.HasOne(d => d.Assessment)
+                //    .WithMany(p => p.AssessmentMeta)
+                //    .HasForeignKey(d => d.AssessmentId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_meta_assessments");
             });
 
             modelBuilder.Entity<AssessmentOption>(entity =>
@@ -348,11 +348,11 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Question)
-                    .WithMany(p => p.AssessmentOptions)
-                    .HasForeignKey(d => d.QuestionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_options_assessment_questions");
+                //entity.HasOne(d => d.Question)
+                //    .WithMany(p => p.AssessmentOptions)
+                //    .HasForeignKey(d => d.QuestionId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_options_assessment_questions");
             });
 
             modelBuilder.Entity<AssessmentQuestion>(entity =>
@@ -406,17 +406,17 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Assessment)
-                    .WithMany(p => p.AssessmentQuestionsRelations)
-                    .HasForeignKey(d => d.AssessmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_questions_relation_assessments");
+                //entity.HasOne(d => d.Assessment)
+                //    .WithMany(p => p.AssessmentQuestionsRelations)
+                //    .HasForeignKey(d => d.AssessmentId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_questions_relation_assessments");
 
-                entity.HasOne(d => d.Question)
-                    .WithMany(p => p.AssessmentQuestionsRelations)
-                    .HasForeignKey(d => d.QuestionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_questions_relation_assessment_questions");
+                //entity.HasOne(d => d.Question)
+                //    .WithMany(p => p.AssessmentQuestionsRelations)
+                //    .HasForeignKey(d => d.QuestionId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_questions_relation_assessment_questions");
             });
 
             modelBuilder.Entity<AssessmentSection>(entity =>
@@ -448,11 +448,11 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Assessment)
-                    .WithMany(p => p.AssessmentSections)
-                    .HasForeignKey(d => d.AssessmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_sections_assessments");
+                //entity.HasOne(d => d.Assessment)
+                //    .WithMany(p => p.AssessmentSections)
+                //    .HasForeignKey(d => d.AssessmentId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_sections_assessments");
             });
 
             modelBuilder.Entity<AssessmentText>(entity =>
@@ -479,11 +479,11 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Question)
-                    .WithMany(p => p.AssessmentTexts)
-                    .HasForeignKey(d => d.QuestionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_text_assessment_questions");
+                //entity.HasOne(d => d.Question)
+                //    .WithMany(p => p.AssessmentTexts)
+                //    .HasForeignKey(d => d.QuestionId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_text_assessment_questions");
             });
 
             modelBuilder.Entity<AssessmentTrueFalse>(entity =>
@@ -506,11 +506,11 @@ namespace Exam.Models
                     .HasColumnType("datetime")
                     .HasColumnName("updated_at");
 
-                entity.HasOne(d => d.Question)
-                    .WithMany(p => p.AssessmentTrueFalses)
-                    .HasForeignKey(d => d.QuestionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_assessment_true_false_assessment_questions");
+                //entity.HasOne(d => d.Question)
+                //    .WithMany(p => p.AssessmentTrueFalses)
+                //    .HasForeignKey(d => d.QuestionId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("FK_assessment_true_false_assessment_questions");
             });
 
             modelBuilder.Entity<User>(entity =>

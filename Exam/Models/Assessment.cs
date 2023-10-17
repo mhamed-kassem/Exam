@@ -9,13 +9,13 @@ namespace Exam.Models
     {
         public Assessment()
         {
-            AssessmentAnswers = new HashSet<AssessmentAnswer>();
-            AssessmentData = new HashSet<AssessmentDatum>();
-            AssessmentDepartments = new HashSet<AssessmentDepartment>();
-            AssessmentEnrols = new HashSet<AssessmentEnrol>();
-            AssessmentMeta = new HashSet<AssessmentMetum>();
-            AssessmentQuestionsRelations = new HashSet<AssessmentQuestionsRelation>();
-            AssessmentSections = new HashSet<AssessmentSection>();
+            //AssessmentAnswers = new HashSet<AssessmentAnswer>();
+            //AssessmentData = new HashSet<AssessmentDatum>();
+            //AssessmentDepartments = new HashSet<AssessmentDepartment>();
+            //AssessmentEnrols = new HashSet<AssessmentEnrol>();
+            //AssessmentMeta = new HashSet<AssessmentMetum>();
+            //AssessmentQuestionsRelations = new HashSet<AssessmentQuestionsRelation>();
+            //AssessmentSections = new HashSet<AssessmentSection>();
         }
 
         public long Id { get; set; }
@@ -32,12 +32,12 @@ namespace Exam.Models
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
 
-        public virtual ICollection<AssessmentAnswer> AssessmentAnswers { get; set; }
-        public virtual ICollection<AssessmentDatum> AssessmentData { get; set; }
-        public virtual ICollection<AssessmentDepartment> AssessmentDepartments { get; set; }
-        public virtual ICollection<AssessmentEnrol> AssessmentEnrols { get; set; }
-        public virtual ICollection<AssessmentMetum> AssessmentMeta { get; set; }
-        public virtual ICollection<AssessmentQuestionsRelation> AssessmentQuestionsRelations { get; set; }
-        public virtual ICollection<AssessmentSection> AssessmentSections { get; set; }
+        //public virtual ICollection<AssessmentAnswer> AssessmentAnswers { get; set; }
+        //public virtual ICollection<AssessmentDatum> AssessmentData { get; set; }
+        //public virtual ICollection<AssessmentDepartment> AssessmentDepartments { get; set; }
+        //public virtual ICollection<AssessmentEnrol> AssessmentEnrols { get; set; }
+        //public virtual ICollection<AssessmentMetum> AssessmentMeta { get; set; }
+        //public virtual ICollection<AssessmentQuestionsRelation> AssessmentQuestionsRelations { get; set; }
+        //public virtual ICollection<AssessmentSection> AssessmentSections { get; set; }
     }
 }
