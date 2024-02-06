@@ -9,8 +9,8 @@ using Exam.Models;
 
 namespace Exam.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    //[Route("api/[controller]")]
+    //[ApiController]
     public class AssessmentsController : ControllerBase
     {
         private readonly edulmsContext _context;
@@ -30,6 +30,10 @@ namespace Exam.Controllers
             // Exam For Level 1 Contain All Question Types
             var Model = new ExamModel();
             Model.ExamInfo = _context.Assessments.IgnoreAutoIncludes().OrderByDescending(x=>x.CreatedAt).FirstOrDefault();
+            if (Model.ExamInfo == null)
+            {
+                return Model;
+            }
             var ExamQuestionsIds = _context.AssessmentQuestionsRelations.Where(r => r.AssessmentId == Model.ExamInfo.Id).ToList();
             //1 type
             var MatchQuestionsIds = _context.AssessmentQuestions.IgnoreAutoIncludes().Where(x => x.Level == 1 && x.Type == "match" && ExamQuestionsIds.Any(r => r.QuestionId == x.Id)).ToList();
@@ -47,7 +51,6 @@ namespace Exam.Controllers
             return Model;
 
         }
-
 
     }
 }

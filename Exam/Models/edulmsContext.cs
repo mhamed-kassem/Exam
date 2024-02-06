@@ -13,8 +13,7 @@ namespace Exam.Models
         {
         }
 
-        public edulmsContext(DbContextOptions<edulmsContext> options)
-            : base(options)
+        public edulmsContext(DbContextOptions<edulmsContext> options): base(options)
         {
         }
 
@@ -37,7 +36,7 @@ namespace Exam.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.; Database= edulms; Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.; Database=edulms; Trusted_Connection=True;");
             }
         }
 
